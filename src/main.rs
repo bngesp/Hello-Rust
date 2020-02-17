@@ -2,6 +2,7 @@ mod word_count;
 use std::fs::File;
 use std::io::prelude::BufRead;
 use std::io::BufReader;
+use std::borrow::Borrow;
 
 fn main(){
 
@@ -25,5 +26,5 @@ fn main(){
         }
     }
 
-    word_counter.display();
+    word_counter.display(2u64.borrow());
 }

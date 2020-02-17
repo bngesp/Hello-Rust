@@ -15,11 +15,15 @@ impl WordCount {
         let count = self.element.entry(key).or_insert(0);
         *count+=1;
         self.nombre+=1;
+
     }
 
-    pub(crate) fn display(self){
+    pub(crate) fn display(&self, filter: &u64){
         for (k, v) in self.element.iter() {
-            println!("{}: {}", k, v);
+            if v>=filter {
+                println!("{}: {}", k, v);
+            }
+
         }
         println!("le nombre de mot {}", self.nombre);
     }

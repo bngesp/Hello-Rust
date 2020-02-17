@@ -1,0 +1,5 @@
+[package]
+name = "my_crate"
+version = "0.1.0"
+authors = ["bngesp <bassiroungom@esp.sn>"]
+edition = "2018"
